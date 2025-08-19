@@ -19,7 +19,7 @@ func initalize(start_position,player_position):
 	# 然后根据怪物（mob）的 Y 轴旋转角度来旋转速度向量，从而让怪物按照它面朝的方向移动。
 	velocity = velocity.rotated(Vector3.UP,rotation.y)
 	
-	$AnimationPlayer.speed_scale = random_speed / min_speed
+	$AnimationPlayer.speed_scale = random_speed / float(min_speed)
 
 # 离开屏幕的信号
 func _on_visible_on_screen_notifier_3d_screen_exited():
